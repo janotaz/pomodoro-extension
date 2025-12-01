@@ -4,7 +4,7 @@ A lightweight, privacy-focused Chrome extension that helps you stay productive u
 
 
 <p align="center">
-   <img src="screenshots/popup-work.png" alt="Work Session" width="45%">
+   <img src="screenshots/popup-work.jpg" alt="Work Session" width="45%">
 </p>
 
 ## Features
