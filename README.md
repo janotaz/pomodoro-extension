@@ -2,6 +2,11 @@
 
 A lightweight, privacy-focused Chrome extension that helps you stay productive using the Pomodoro Technique with built-in website blocking during focus sessions.
 
+
+<p align="center">
+   <img src="screenshots/popup-work.png" alt="Work Session" width="45%">
+</p>
+
 ## Features
 
 - **Customizable Work & Break Sessions** - Choose from preset durations (15-60 min work, 3-30 min breaks)
