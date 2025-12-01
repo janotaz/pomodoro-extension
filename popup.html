@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pomodoro Timer</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        min-width: 260px;
+        padding: 12px;
+      }
+      .mode {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .time {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .row {
+        margin-bottom: 8px;
+      }
+      #taskInput {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        font-size: 13px;
+      }
+
+      /* Session settings card (design #1) */
+      .session-card {
+        margin-top: 8px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: 1px solid #e2e2e2;
+        background: #fafafa;
+      }
+      .session-card-header {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #888;
+        margin-bottom: 6px;
+      }
+      .field {
+        margin-bottom: 6px;
+      }
+      .field label {
+        display: block;
+        font-size: 12px;
+        color: #444;
+        margin-bottom: 2px;
+      }
+      .select {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        padding: 4px 6px;
+        font-size: 13px;
+        background: #fff;
+      }
+
+      #workButton {
+        background-color: #c0392b;
+        color: #ffffff;
+        border: none;
+        border-radius: 999px;
+        padding: 8px 18px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      #workButton:hover {
+        opacity: 0.92;
+      }
+
+      #todaySummary {
+        font-size: 12px;
+        margin-top: 6px;
+        margin-bottom: 4px;
+      }
+      #todayLog {
+        list-style: none;
+        padding-left: 0;
+        max-height: 200px;
+        overflow-y: auto;
+        font-size: 12px;
+      }
+      #todayLog li {
+        margin-bottom: 4px;
+      }
+      hr {
+        margin: 10px 0 8px 0;
+      }
+      a {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mode" id="modeLabel">Mode: –</div>
+    <div class="time" id="timeLabel">--:--</div>
+
+    <div class="row">
+      <label for="taskInput">Current task:</label>
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="What are you working on?"
+      />
+    </div>
+
+    <div class="session-card">
+      <div class="session-card-header">Session settings</div>
+
+      <div class="field">
+        <label for="workDurationSelect">Work length</label>
+        <select id="workDurationSelect" class="select">
+          <option value="15">15 minutes</option>
+          <option value="25">25 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="45">45 minutes</option>
+          <option value="50">50 minutes</option>
+          <option value="60">60 minutes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="breakDurationSelect">Break length</label>
+        <select id="breakDurationSelect" class="select">
+          <option value="3">3 minutes</option>
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="30">30 minutes</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 10px;">
+      <button id="workButton">Work</button>
+    </div>
+
+    <div class="row">
+      <a href="#" id="optionsLink">Settings</a>
+    </div>
+
+    <hr />
+
+    <div id="todaySummary"></div>
+    <ul id="todayLog"></ul>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
